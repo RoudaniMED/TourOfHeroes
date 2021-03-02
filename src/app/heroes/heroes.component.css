@@ -1,0 +1,7 @@
+.hero-item:hover {
+    color: tomato;
+    
+}
+.selected {
+    color: tomato;
+}
