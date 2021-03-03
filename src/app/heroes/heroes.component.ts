@@ -12,25 +12,13 @@ import { MessageService } from '../message.service';
 export class HeroesComponent {
   // Properties
   heroes: Hero[] = [];
-  selectedHero?: Hero;
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm',
-  };
   ngOnInit(): void {
     this.getHeroes();
   }
   // constructor and service injection
-  constructor(
-    private heroService: HeroService,
-    private messageService: MessageService
-  ) {}
+  constructor(private heroService: HeroService) {}
   // Methods and handlers
-  handleClick(hero: Hero) {
-    console.log(hero);
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+  /* removing the click handler after refactoring the list code*/
 
   /* retrieve all heroes from HeroService synchronously
    * getHeroes(): void {
